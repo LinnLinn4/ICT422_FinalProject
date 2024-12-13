@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Gamekit3D;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -38,11 +39,12 @@ namespace Gamekit3D
 
         public void Quit()
         {
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-		    Application.Quit();
-#endif
+// #if UNITY_EDITOR
+//             EditorApplication.isPlaying = false;
+// #else
+// 		    Application.Quit();
+// #endif
+            SceneManager.LoadScene("Home");
         }
 
         public void ExitPause()
