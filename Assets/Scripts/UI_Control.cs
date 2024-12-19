@@ -29,4 +29,5 @@ public class UI_Control : MonoBehaviour
     {
         Application.Quit();
     }
+
 }

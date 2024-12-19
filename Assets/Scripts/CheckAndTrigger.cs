@@ -9,7 +9,7 @@ using UnityEngine.WSA;
 
 public class CheckAndTrigger : MonoBehaviour
 {
-    public List<string> itemsToCheck = new List<string> { "key" };
+    public List<string> itemsToCheck = new List<string> { "key", "battery", "access-card"};
 
     public bool activate = false;
 
@@ -31,6 +31,8 @@ public class CheckAndTrigger : MonoBehaviour
         {
             if (!GameState.playerItem.Contains(itemsToCheck[i]))
             {
+                Dialogue_Control.instance.DialogueCanvas_Activate($"You haven't collected {itemsToCheck[i]}");
+                Dialogue_Control.instance.DialogueCanvas_Deactivate(3f);
                 return;
             }
         }
