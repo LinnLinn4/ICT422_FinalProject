@@ -46,7 +46,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1508,7 +1508,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3531,13 +3531,13 @@ MonoBehaviour:
   meleeWeapon: {fileID: 114176760753491054}
   playerScanner:
     heightOffset: 1
-    detectionRadius: 15
-    detectionAngle: 270
+    detectionRadius: 10
+    detectionAngle: 119
     maxHeightDifference: 1
     viewBlockerLayerMask:
       serializedVersion: 2
       m_Bits: 2147483648
-  timeToStopPursuit: 3
+  timeToStopPursuit: 5
   attackAudio: {fileID: 114190857395315650}
   frontStepAudio: {fileID: 114857521794206750}
   backStepAudio: {fileID: 114736383910666334}
@@ -3557,8 +3557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0149b5ab8f608c943b260125ac76d875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 1
-  invulnerabiltyTime: 0
+  maxHitPoints: 999
+  invulnerabiltyTime: 999
   hitAngle: 360
   hitForwardRotation: 360
   OnDeath:
@@ -3948,7 +3948,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0

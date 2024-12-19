@@ -20,7 +20,6 @@ public class InteractPannel : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     public void Int_Activate(string text)

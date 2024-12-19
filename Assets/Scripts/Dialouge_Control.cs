@@ -21,7 +21,6 @@ public class Dialogue_Control : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     public void DialogueCanvas_Activate(string text)

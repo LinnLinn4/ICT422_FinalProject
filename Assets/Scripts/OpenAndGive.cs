@@ -28,7 +28,7 @@ public class OpenAndGive : MonoBehaviour
                 GetComponent<Animator>().SetTrigger("open");
                 opened = true;
                 InteractPannel.instance.Int_Deactivate();
-                GameState.addPlayerItem(itemToGive.Length == 0 ? GameState.availItem.First(): itemToGive);
+                GameState.addPlayerItem(itemToGive.Length == 0 ? "random item" : itemToGive);
             }
         }
 
