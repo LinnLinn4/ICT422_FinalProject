@@ -31,16 +31,31 @@ public class PasswordManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-
                 PWPanel.SetActive(true);
             }
         }
 
     }
-
+    void toggleCursor(bool value)
+    {
+        Cursor.lockState = !value ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = value;
+        if (value)
+        {
+            PlayerInput.Instance.ReleaseControl();
+        }
+        else
+        {
+            PlayerInput.Instance.GainControl();
+        }
+    }
 
     void Update()
     {
+        if (PWPanel != null)
+        {
+            toggleCursor(PWPanel.activeSelf);
+        }
         if (opened) return;
         if (PWPanel.activeSelf && Input.GetKeyDown(KeyCode.Return))
         {
@@ -50,13 +65,13 @@ public class PasswordManager : MonoBehaviour
 
     public void CheckInput()
     {
+
         if (inputfield.text == "4186")      // check password
         {
             opened = true;
             Debug.Log("Password accepted");
             PWPanel.SetActive(false);
-            //PWCorrectPanel.SetActive(true);
-
+            InteractPannel.instance.Int_Deactivate();
         }
         else
         {
@@ -64,6 +79,7 @@ public class PasswordManager : MonoBehaviour
             PWPanel.SetActive(false);
             //PWIncorrectPanel.SetActive(true);
         }
+
     }
 
 
