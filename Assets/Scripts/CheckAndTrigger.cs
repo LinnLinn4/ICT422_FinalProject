@@ -9,10 +9,10 @@ using UnityEngine.WSA;
 
 public class CheckAndTrigger : MonoBehaviour
 {
-    public List<string> itemsToCheck = new List<string> { "key", "battery", "access-card"};
+    public List<string> itemsToCheck = new List<string> { "key", "battery", "access-card" };
 
     public bool activate = false;
-
+    public float duration = 4f;
     float time = 0f;
     void Update()
     {
@@ -21,7 +21,7 @@ public class CheckAndTrigger : MonoBehaviour
         {
             d = -1f;
         }
-        time = Mathf.Clamp01(time + (d * Time.deltaTime / 4f));
+        time = Mathf.Clamp01(time + (d * Time.deltaTime / duration));
         GetComponent<SimpleTranslator>().PerformTransform(time);
     }
 
@@ -32,7 +32,7 @@ public class CheckAndTrigger : MonoBehaviour
             if (!GameState.playerItem.Contains(itemsToCheck[i]))
             {
                 Dialogue_Control.instance.DialogueCanvas_Activate($"You haven't collected {itemsToCheck[i]}");
-                Dialogue_Control.instance.DialogueCanvas_Deactivate(3f);
+
                 return;
             }
         }
@@ -41,6 +41,7 @@ public class CheckAndTrigger : MonoBehaviour
 
     public void close()
     {
+        Dialogue_Control.instance.DialogueCanvas_Deactivate();
         Debug.Log("Exit");
         activate = false;
     }

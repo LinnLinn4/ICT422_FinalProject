@@ -4,7 +4,10 @@ using UnityEngine;
 public class OpenAndGive : MonoBehaviour
 {
     public bool opened = false;
-    
+
+
+    public string itemToGive;
+
 
     void OnTriggerStay(Collider other)
     {
@@ -14,16 +17,26 @@ public class OpenAndGive : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Player"))
         {
-            Dialogue_Control.instance.DialogueCanvas_Activate("Press F to open");
+            if (!opened)
+            {
+                InteractPannel.instance.Int_Activate("Press F to open");
+            }
+
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Dialogue_Control.instance.DialogueCanvas_Deactivate(0.0f);
+
                 GetComponent<Animator>().SetTrigger("open");
                 opened = true;
-                GameState.addPlayerItem(GameState.availItem.First());
-                Debug.Log("opened");
+                InteractPannel.instance.Int_Deactivate();
+                GameState.addPlayerItem(itemToGive ?? GameState.availItem.First());
             }
         }
 
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        InteractPannel.instance.Int_Deactivate();
+    }
+
 }
