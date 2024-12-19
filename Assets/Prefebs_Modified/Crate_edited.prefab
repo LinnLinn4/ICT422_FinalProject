@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6467965851526322887}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_SideLight_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 850524221601461281}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_SideLight_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2698371009198531727}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Crate_edited
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ Transform:
   m_GameObject: {fileID: 1562622375595586463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.750546, y: 5.2000003, z: 3.4070766}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 729704375099367763}
   - component: {fileID: 5398754018085088419}
   - component: {fileID: 8968802263979291335}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Crate_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010823834672141438}
   - component: {fileID: 3534506944901870254}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662939423868568031}
   - component: {fileID: 6520820661883006237}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,10 @@ GameObject:
   - component: {fileID: 1620503834567759332}
   - component: {fileID: 1019252027097433372}
   - component: {fileID: 8989830074851827291}
-  m_Layer: 0
+  - component: {fileID: 5616121471360158451}
+  - component: {fileID: 2499454121461605707}
+  - component: {fileID: 6865563761898061754}
+  m_Layer: 16
   m_Name: Crate_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +402,7 @@ Transform:
   m_GameObject: {fileID: 5053610628191317444}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.000000021855696, z: 0.5}
+  m_LocalPosition: {x: -0, y: -0.0000000218557, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -455,6 +458,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!95 &5616121471360158451
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053610628191317444}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0887878020c84ae4f89721b1c1e03972, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2499454121461605707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053610628191317444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e74d22e9d2122b4d8923414b519790d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+--- !u!65 &6865563761898061754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053610628191317444}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4849725, y: 2.7496822, z: 0.8464946}
+  m_Center: {x: 0.026935339, y: -0.20127654, z: -0.114135504}
 --- !u!1 &5989721283921199936
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,7 +524,7 @@ GameObject:
   - component: {fileID: 8734408511340329213}
   - component: {fileID: 917123408872715893}
   - component: {fileID: 6243822887516739756}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_SideLight_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +607,7 @@ GameObject:
   - component: {fileID: 1846016615724960843}
   - component: {fileID: 4784294932240296221}
   - component: {fileID: 7738850657399558552}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light_SideLight_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}

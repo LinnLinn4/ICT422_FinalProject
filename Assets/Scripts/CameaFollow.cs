@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class CameaFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject follow;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = new Vector3(transform.position.x, follow.transform.position.y, transform.position.z);
     }
 }

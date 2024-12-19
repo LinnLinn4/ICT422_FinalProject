@@ -139,6 +139,9 @@ GameObject:
   - component: {fileID: 7941514709823083156}
   - component: {fileID: 5191012981256202131}
   - component: {fileID: 7291168495404031710}
+  - component: {fileID: 7117733274420968134}
+  - component: {fileID: 7393713802951238968}
+  - component: {fileID: 166338514551430269}
   m_Layer: 16
   m_Name: DoorSmall
   m_TagString: Untagged
@@ -226,6 +229,87 @@ MonoBehaviour:
   rigidbody: {fileID: 1321208760247893425}
   start: {x: 0, y: 0, z: 0}
   end: {x: 0, y: -4.1, z: 0}
+--- !u!65 &7117733274420968134
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784582421906272670}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.178781, y: 1, z: 2.803488}
+  m_Center: {x: 1.5893983, y: 0, z: 0.90174437}
+--- !u!114 &7393713802951238968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784582421906272670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e38ccf902f148e69c411da9fcde5cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 166338514551430269}
+        m_TargetAssemblyTypeName: CheckAndTrigger, Assembly-CSharp
+        m_MethodName: check
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Open
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 166338514551430269}
+        m_TargetAssemblyTypeName: CheckAndTrigger, Assembly-CSharp
+        m_MethodName: close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  inventoryChecks: []
+--- !u!114 &166338514551430269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8784582421906272670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6123a04ef95d9ce4aa0f7a93b76b0d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToCheck:
+  - key
 --- !u!1001 &9146437010844336628
 PrefabInstance:
   m_ObjectHideFlags: 0
