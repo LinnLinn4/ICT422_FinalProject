@@ -13,6 +13,7 @@ public class PasswordManager : MonoBehaviour
     public GameObject PWPanel;
     public UnityEvent onOpen;
     bool opened = false;
+    public string pw_string = "";
 
     private void OnTriggerExit(Collider other)
     {
@@ -66,6 +67,11 @@ public class PasswordManager : MonoBehaviour
             CheckInput();
         }
     }
+    
+    public void EnterPassword(string pw_string)
+    {
+        inputfield.text += pw_string;
+    }
 
     public void CheckInput()
     {
@@ -84,6 +90,7 @@ public class PasswordManager : MonoBehaviour
             PWPanel.SetActive(false);
             //PWIncorrectPanel.SetActive(true);
         }
+        pw_string = "";
         inputfield.text = "";
         toggleCursor(PWPanel.activeSelf);
     }

@@ -7,10 +7,14 @@ public class UI_Control : MonoBehaviour
 {
     public GameObject menuCanvas;
     public GameObject controlsCanvas;
+    public GameObject dialogueCanvas;
+    public GameObject dialogueText;
 
     public void PlayButton()
     {
-        SceneManager.LoadScene("Game");
+        
+        dialogueCanvas.SetActive(true);
+        //SceneManager.LoadScene("Game");
     }
 
     public void ControlButton()
