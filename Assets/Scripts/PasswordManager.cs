@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 
@@ -10,8 +11,7 @@ public class PasswordManager : MonoBehaviour
 {
     public TMP_InputField inputfield;
     public GameObject PWPanel;
-    public GameObject intercom;
-
+    public UnityEvent onOpen;
     bool opened = false;
 
     private void OnTriggerExit(Collider other)
@@ -75,6 +75,7 @@ public class PasswordManager : MonoBehaviour
             opened = true;
             Debug.Log("Password accepted");
             PWPanel.SetActive(false);
+            onOpen.Invoke();
             InteractPannel.instance.Int_Deactivate();
         }
         else
