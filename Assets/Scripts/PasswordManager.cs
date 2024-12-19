@@ -38,7 +38,7 @@ public class PasswordManager : MonoBehaviour
     }
     void toggleCursor(bool value)
     {
-        Cursor.lockState = !value ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None;
         Cursor.visible = value;
         if (value)
         {
