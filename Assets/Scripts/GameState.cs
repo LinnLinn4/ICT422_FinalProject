@@ -36,7 +36,7 @@ public class GameState : MonoBehaviour
     }
     public void endGame()
     {
-        ellen.active = false;
+        ellen.SetActive(false);
         camera1.GetComponent<CameraSettings>().follow = pod.transform;
         camera1.GetComponent<CameraSettings>().lookAt = pod.transform;
         StartCoroutine(DelayRun(7.5f, () =>
