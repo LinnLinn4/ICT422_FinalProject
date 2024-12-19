@@ -6,7 +6,7 @@ public class OpenAndGive : MonoBehaviour
     public bool opened = false;
 
 
-    public string itemToGive;
+    public string itemToGive = "";
 
 
     void OnTriggerStay(Collider other)
@@ -28,7 +28,7 @@ public class OpenAndGive : MonoBehaviour
                 GetComponent<Animator>().SetTrigger("open");
                 opened = true;
                 InteractPannel.instance.Int_Deactivate();
-                GameState.addPlayerItem(itemToGive ?? GameState.availItem.First());
+                GameState.addPlayerItem(itemToGive.Length == 0 ? GameState.availItem.First(): itemToGive);
             }
         }
 

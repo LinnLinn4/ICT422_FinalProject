@@ -9,7 +9,7 @@ using UnityEngine.WSA;
 
 public class CheckAndTrigger : MonoBehaviour
 {
-    public List<string> itemsToCheck = new List<string> { "key", "battery", "access-card" };
+    public List<string> itemsToCheck = new List<string> { "key", "battery", "access-card", "screwdriver", "wire", "harddisk", "security-pass", "gear"};
 
     public bool activate = false;
     public float duration = 4f;

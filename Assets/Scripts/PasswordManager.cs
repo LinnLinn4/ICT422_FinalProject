@@ -14,7 +14,10 @@ public class PasswordManager : MonoBehaviour
 
     bool opened = false;
 
-
+    private void OnTriggerExit(Collider other)
+    {
+        InteractPannel.instance.Int_Deactivate();
+    }
 
     void OnTriggerStay(Collider other)
     {
@@ -52,11 +55,12 @@ public class PasswordManager : MonoBehaviour
 
     void Update()
     {
-        if (PWPanel != null)
+
+        if (opened) return;
+        if (PWPanel != null && PWPanel.activeSelf)
         {
             toggleCursor(PWPanel.activeSelf);
         }
-        if (opened) return;
         if (PWPanel.activeSelf && Input.GetKeyDown(KeyCode.Return))
         {
             CheckInput();
@@ -79,8 +83,8 @@ public class PasswordManager : MonoBehaviour
             PWPanel.SetActive(false);
             //PWIncorrectPanel.SetActive(true);
         }
-
+        inputfield.text = "";
+        toggleCursor(PWPanel.activeSelf);
     }
-
 
 }
